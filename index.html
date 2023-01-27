@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="sass/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;500&display=swap" rel="stylesheet">
+  <title>Тестовое задание Frontend 500na700 </title>
+</head>
+<body>
+  <header class="header">
+    <div class="wrapper header__wrapper">
+      <div class="header__logo">
+        <img src="./img/logo.png" alt="logo">
+        <span class="hamburger" id="sandwichmenu">
+          <span class="hamburger__line"></span>
+      </span>
+      </div>
+      <nav class="">
+        <ul class="navigation">
+            <li class="navigation__link">Пункт 1
+              <ul class="navigation__submenu">
+                <li>Подпункт меню</li>
+                <li>Подпункт меню</li>
+                <li>Подпункт меню</li>
+                <li>Подпункт меню</li>
+                <li>Подпункт меню</li>
+              </ul>
+            </li>               
+            <li class="navigation__link">Пункт 2</li>
+            <li class="navigation__link">Пункт 3</li>
+            <li class="navigation__link">Пункт 4</li>
+            <li class="navigation__link">Пункт 5</li>
+        </ul>
+    </nav>
+    </div>
+  </header>
+  <section class="promo">
+    <div class="wrapper promo__wrapper">
+      <div class="promo-slider">
+        <div class="promo__container">
+          <img src="./img/promo-2.png" alt="promo-2" class="promo-img">
+          <h2 class="promo__title">Слайд 2</h2>
+        </div>
+       
+        <div class="promo-arrow">
+          <img src="./img/arrow-left.png" alt="arrow-left">
+          <img src="./img/arrow-right.png" alt="arrow-right">
+        </div>
+      </div>
+     
+    </div>
+  </section>
+  <section class="about-us">
+    <div class="wrapper about-us__wrapper">
+      <div class="about-us-2-column">
+        <h2 class="about-us__title">FAQ</h2>
+        <table>
+            <tr>
+              <td><h3 class="about-us__subtitle">Как добраться до музея?</h3></td>            
+            </tr>
+            <tr>
+              <td><p class="about-us__text">В Национальный музей Республики Татарстан можно добраться общественным транспортом:1) «Станция метро «Кремлевская», а затем по направлению к Кремлю пройдя 5 минут пешком;</p></td>
+            </tr>
+            <tr>
+              <td><h3 class="about-us__subtitle">Есть ли поблизости удобная парковка?</h3></td>
+            </tr>
+            <tr>
+              <td><h3 class="about-us__subtitle">Можно ли воспользоваться аудиогидом?</h3></td>
+            </tr>
+        </table>
+      </div>
+      
+    </div>
+  </section>
+  <section class="news">
+    <div class="wrapper news__wrapper">
+      <h2 class="news__title">Новости</h2>
+      <div class="layout-3-column">
+        <article class="news block-shadowed">
+          <img class="news__image" src="./img/news/news-img1.png" alt="news-img1">
+          <div class="news__content">
+              <h4 class="news__name">Заголовок</h4>
+              <p class="news__text">Описание Описание Описание  Описание Описание Описание  Описание</p>             
+          </div>
+        </article>
+        <article class="news block-shadowed">
+          <img class="news__image" src="./img/news/news-img2.png" alt="news-img2">
+          <div class="news__content">
+              <h4 class="news__name">Заголовок</h4>
+              <p class="news__text">Описание Описание Описание  Описание Описание Описание  Описание</p>             
+          </div>
+        </article>
+        <article class="news block-shadowed">
+          <img class="news__image" src="./img/news/news-img3.png" alt="news-img3">
+          <div class="news__content">
+              <h4 class="news__name">Заголовок</h4>
+              <p class="news__text">Описание Описание Описание  Описание Описание Описание  Описание</p>             
+          </div>
+        </article>
+        <article class="news block-shadowed">
+          <img class="news__image" src="./img/news/news-img4.png" alt="news-img4">
+          <div class="news__content">
+              <h4 class="news__name">Заголовок</h4>
+              <p class="news__text">Описание Описание Описание  Описание Описание Описание  Описание</p>             
+          </div>
+        </article>
+        <article class="news block-shadowed">
+          <img class="news__image" src="./img/news/news-img5.png" alt="news-img5">
+          <div class="news__content">
+              <h4 class="news__name">Заголовок</h4>
+              <p class="news__text">Описание Описание Описание  Описание Описание Описание  Описание</p>             
+          </div>
+        </article>
+        <article class="news block-shadowed">
+          <img class="news__image" src="./img/news/news-img6.png" alt="news-img6">
+          <div class="news__content">
+              <h4 class="news__name">Заголовок</h4>
+              <p class="news__text">Описание Описание Описание  Описание Описание Описание  Описание</p>             
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+  <section class="subscribe">
+    <div class="wrapper subscribe__wrapper">
+      <h2 class="subscribe__title">Подпишись</h2>
+      <p class="subscribe__text">Отправляем анонсы новых статей, выпусков и трансляций</p>
+      <form action="" class="layout-2-column">
+        <input type="text" placeholder="Email">
+        <input type="number" placeholder="11.02.2022">
+        <input type="phone" placeholder="Телефон">
+        <input type="time" placeholder="15:00">
+      </form>
+      <button class="subscribe__button">Подписаться</button>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="wrapper footer__wrapper">
+      <div class="footer-2-column">
+        <div class="footer__content">
+          <h4 class="footer__name">Заголовок</h4>
+          <p class="footer__text">Описание Описание Описание  Описание Описание Описание  Описание</p> 
+          <a>500na700.ru</a> 
+        </div>      
+          <ul class="footer__icons">
+            <li><span class="ico ico-vk"></span></li>
+            <li><span class="ico ico-fb"></span></li>
+            <li><span class="ico ico-tiktoc"></span></li>
+            <li><span class="ico ico-yt"></span></li>
+          </ul> 
+      </div>     
+    </div>
+    
+  </footer>
+</body>
+</html>

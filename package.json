@@ -1,0 +1,20 @@
+{
+  "name": "test-frontend-500na700-",
+  "version": "1.0.0",
+  "description": "Layout the page.",
+  "main": "index.js",
+  "scripts": {
+    "style": "sass --watch sass/style.scss sass/style.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SERGEEVAAV/Test-Frontend-500na700-.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SERGEEVAAV/Test-Frontend-500na700-/issues"
+  },
+  "homepage": "https://github.com/SERGEEVAAV/Test-Frontend-500na700-#readme"
+}

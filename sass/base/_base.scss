@@ -1,0 +1,14 @@
+body {
+  @extend %font-prim;
+  overflow-x: hidden;
+}
+html {
+  overflow-x: hidden;
+}
+
+
+// h2 {
+//   @extend %font-prim;
+//   @include font($size: 80px, $height: 85px);
+//   letter-spacing: -0.03em;
+// }

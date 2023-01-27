@@ -1,0 +1,23 @@
+.layout-3-column {
+  display: grid;
+  grid-template-columns: repeat(3, 400px);
+  justify-content: center;
+  column-gap: 20px;
+  @include media-mobile {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+.layout-2-column {
+  display: grid;
+  grid-template-columns: repeat(2, 400px);
+  justify-content: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+  @include media-mobile {
+    grid-template-columns: repeat(1, 384px);
+  }
+  @include media-mobilessmall {
+    grid-template-columns: repeat(1, 289px);
+  }
+}

@@ -1,0 +1,32 @@
+.news {
+  background: $color-background;
+}
+.news__wrapper {
+  max-width: 1240px;
+  @include media-mobile {
+    max-width: 384px;
+}
+}
+.news__title {
+  @include font($size: 80px, $height: 85px);
+  letter-spacing: -0.03em;
+  color: $color-light;
+  margin: 0;
+  margin-bottom: 30px;
+  @include media-mobile {
+    @include font($size: 40px, $height: 85px);
+  }
+}
+.news__name {
+  @include font($size: 16px, $height: 24px);
+  color: $color-light;
+}
+.news__text {
+  @include font($size: 14px, $height: 21px);
+  color: $color-light;
+}
+.news > img {
+  @include media-mobile {
+    width: 200px;
+  }
+}
