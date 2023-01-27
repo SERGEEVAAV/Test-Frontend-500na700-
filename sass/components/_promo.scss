@@ -7,10 +7,23 @@
     max-width: 384px;
 }
 }
-.promo__container{
-  position: relative;
-  z-index: 1;
+#slide { 
+  display: flex;
+  justify-content: center;
+  width: 1440px;
+  column-gap: 30px;
+  overflow: hidden;
 }
+.slide-single {
+  width: 1240px; 
+  transition: all ease 1s;
+  left: 0;
+  top: 0;
+}
+// .promo__container{
+//   position: relative;
+//   z-index: 1;
+// }
 .promo__title {
   position: absolute;
   z-index: 3;
@@ -34,7 +47,7 @@
   justify-content: center;
   column-gap: 32px;
   margin-top: 55px;
-  margin-bottom: 150px;
+  // margin-bottom: 150px;
 }
 .promo-img {
   @include media-mobile {
