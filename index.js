@@ -81,3 +81,20 @@ btnPrev.onclick = function() {
   console.log(currentSlideIndex);
 
 }
+
+
+const burger = document.querySelector('.burger');
+const header__navigation = document.querySelector('.header__navigation');
+
+const link = document.querySelector('.navigation__link');
+const navigation__submenu = document.querySelector('.navigation__submenu');
+
+burger.addEventListener('click', () => {
+  burger.classList.toggle('active');
+  header__navigation.classList.toggle('_active');
+});
+
+link.addEventListener('click', () => {
+  link.classList.toggle('active');
+  navigation__submenu.classList.toggle('active');
+});

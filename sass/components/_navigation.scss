@@ -1,8 +1,16 @@
 .navigation {
   display: flex;
-  @include media-mobile {
-    display: none
-  }
+  @include media-tablet {
+    display: block;
+    margin: 0;
+    text-align: center;
+    padding: 0;
+    margin-top: 120px;
+}
+@include media-mobile {
+    padding: 0;
+    
+}
   
 }
 .navigation__link {
@@ -18,46 +26,78 @@
   &:hover {
       color: $color-hover;
   }
-  // &:active {
-  //   border-bottom: 1px solid #fff;
-  //   color: $color-light;
-  // }
+  &:active {
+    border-bottom: 1px solid #fff;
+    color: $color-light;
+  }
+  @include media-tablet {
+    
+    margin-bottom: 40px;
+    text-align: left;
+    margin-left: 50px;
+  }
    
 }
-
-//Sub menu
-// .header__navigation li ul {
-//   position: absolute;
-//   min-width: 362px;
-//   height: 501px;
-//   padding: 0;
-
-// }
-// .header__navigation li > ul li {
-//   padding: 10px;
-//   text-transform: none;
-//   background: #fafafa;
+.header__navigation {
+  @include media-tablet {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 250px; 
+      background: #000;
+      margin-top: 78px;
+      padding: 36px 0;
+      transition: all 0.3s ease 0s;
+      transform: translate(-200%, 0);
+      z-index: 1;
+      body {
+        background: rgba(0, 0, 0, 0.4);
+      }
+      
+  }  
+  @include media-mobile {
+      display: block;
+      width:250px;
+      margin-top: 58px;
+      text-align: center;
+      
+  }    
   
+}
+.header__navigation._active {
+  @include media-tablet {
+      transform: translate(0, 0);
+  }
+ 
   
-// }
-.navigation__submenu {
+}
+
+.navigation > li {
+  position: relative;
+}
+.navigation .navigation__submenu {
+  display: none;
+  column-gap: 200px;
+  column-count: 2;
   position: absolute;
-  top: 150px;
-  max-width: 400px;
-  height: 500px;
+  top: 75px;
+  width: 1440px;
+  z-index: 10;
   margin: 0;
   padding: 0;
-  gap: 142px;
-  column-count: 2;
-  display: none;
-}
-.navigation__submenu > li {
-  margin-bottom: 30px;
   list-style: none;
-  &:hover {
-    color: $color-hover;
-  }
+  background: $color-background;
+ 
+
 }
-.navigation__submenu>li{
+
+.submenu-link {
+  display: flex;
+  margin-bottom: 30px;
+}
+.navigation > li:hover .navigation__submenu {
   display: block;
-}
+  
+}    
+  
+
