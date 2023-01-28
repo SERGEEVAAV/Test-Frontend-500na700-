@@ -2,24 +2,25 @@
   background: $color-background;
 }
 .promo__wrapper {
-  max-width: 1240px;
+  max-width: 1440px;
+  // background: $color-background;
   @include media-mobile {
     max-width: 384px;
 }
 }
-#slide { 
-  display: flex;
-  justify-content: center;
-  width: 1440px;
-  column-gap: 30px;
-  overflow: hidden;
-}
-.slide-single {
-  width: 1240px; 
-  transition: all ease 1s;
-  left: 0;
-  top: 0;
-}
+// #slide { 
+//   display: flex;
+//   justify-content: center;
+//   width: 1440px;
+//   column-gap: 30px;
+//   overflow: hidden;
+// }
+// .slide-single {
+//   width: 1240px; 
+//   transition: all ease 1s;
+//   left: 0;
+//   top: 0;
+// }
 // .promo__container{
 //   position: relative;
 //   z-index: 1;
@@ -37,18 +38,18 @@
     @include font($size: 40px, $height: 85px);
   }
 }
-.promo-slider {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.promo-arrow {
-  display: flex;
-  justify-content: center;
-  column-gap: 32px;
-  margin-top: 55px;
-  // margin-bottom: 150px;
-}
+// .promo-slider {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+// }
+// .promo-arrow {
+//   display: flex;
+//   justify-content: center;
+//   column-gap: 32px;
+//   margin-top: 55px;
+//   // margin-bottom: 150px;
+// }
 .promo-img {
   @include media-mobile {
     width: 384px;
@@ -58,4 +59,73 @@
     width: 290;
     height: 450px;
   }
+}
+
+//slider
+
+.slider {
+  display: flex;
+  justify-content: center;
+  width: 1440px;
+  overflow-x: hidden;
+  // background-color: rgb(182, 203, 222);
+  @include media-mobile {
+    justify-content: left;
+  }
+}
+.slide__container {
+  width: 1240px;
+  position: relative;
+  @include media-mobile {
+    .slide__img {
+      width: 384px;
+      height: 450px;
+    }
+  }
+  
+}
+@include media-mobilessmall {
+  .slide__img {
+    width: 290px;
+    height: 450px;
+  }
+}
+.slide__title {
+  position: absolute;
+  bottom: 159px;
+  left: 50px;
+  font-family: 'Mplus 1p';
+font-style: normal;
+font-weight: 500;
+  font-size: 80px;
+line-height: 85px;
+color: #fff;
+@include media-mobile {
+  font-family: 'Mplus 1p';
+font-style: normal;
+font-weight: 500;
+font-size: 40px;
+line-height: 85px;
+
+}
+}
+.controls> button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 100px;
+  cursor: pointer;
+  @include media-mobile {
+    font-size: 50px;
+  }
+  
+}
+.controls {
+  display: flex;
+  column-gap: 20px;
+  justify-content: center;
+  
+}
+.hidden {
+  display: none;
 }

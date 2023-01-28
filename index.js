@@ -1,47 +1,83 @@
-// let slides = document.querySelectorAll('.slide-single');
-// let slider = [];
-// console.log(slides);
-// for (let i = 0; i < slides.length; i++) {
-//     slider[i] = slides[i].src;
-//     slides[i].remove();
+//Элементы на страницу
 
-// }
-// console.log(slider);
-// let step = 0;
-// let offset = 0;
+const slider = document.querySelector('#slider');
 
-// function draw() {
-//     let img = document.createElement('img');
-//     img.src = slider[step];
-//     img.classList.add('.slide-single');
-//     img.style.left = offset * 1440 + 'px';
-//     document.querySelector('#slide').appendChild(img);
-//     if(step + 1 == slider.length) {
-//         step = 0;
+const  sliderItems = Array.from(slider.children);
 
-//     } else {
-//         step++;
-//     }
-//     offset = 1
-// }
+const btnNext = document.querySelector('#btnNext');
+const btnPrev = document.querySelector('#btnPrev');
 
-// function left() {
-//     document.onclick = null;
 
-//     let slides2 = document.querySelectorAll('.slide-single');
-//     let offset2 = 0;
+sliderItems.forEach(function(slide, index) {
+console.log(slide);
 
-//     for( let i = 0; i < slides2.length; i++) {
-//         slides2[i].style.left = offset2 * 1440 - 1440 + 'px';
-//         offset2++;
-//     }
+//Скрываем все слайды кроме первого
+if(index !== 0) slide.classList.add('hidden');
     
-//     setTimeout(function(){
-//     slides2[0].remove();
-//     draw();
-//     // document.onclick = left;
-//     }, 1000);
 
-// }
-// draw(); draw();
-// document.onclick = left;
+//Добавляем индексы для каждого слайда
+slide.dataset.index = index;
+
+//Добавляем data атрибут active для первого/активного слайда
+
+sliderItems[0].setAttribute('data-active', '');
+
+//Клик по слайдам
+slide.addEventListener('click', function() {
+  //Скрываем текущий слайд
+  slide.classList.add('hidden');
+  slide.removeAttribute('data-active');
+      
+  //Рассчитываем индекс слайда
+
+  let nextSlideIndex = index + 1 === sliderItems.length ? 0 : index + 1;
+
+  //находим следующий слайд 
+  const nextSlide = slider.querySelector(`[data-index='${nextSlideIndex}']`);
+
+  //Отображаем следующий слайд 
+  nextSlide.classList.remove('hidden');
+  nextSlide.setAttribute('data-active', '');
+  });
+
+});
+
+btnNext.onclick = function() {
+  console.log('Next Slide');
+
+  //Скрываем текущий слайд
+  const currentSlide = slider.querySelector(`[data-active]`);
+  const currentSlideIndex = +currentSlide.dataset.index;
+  currentSlide.classList.add('hidden');
+  currentSlide.removeAttribute('data-active');
+
+  //Показывать следующий слайд
+  const nextSlideIndex = currentSlideIndex + 1 === sliderItems.length ? 0 : currentSlideIndex + 1;
+  const nextSlide = slider.querySelector(`[data-index='${nextSlideIndex}']`);
+  nextSlide.classList.remove('hidden');
+  nextSlide.setAttribute('data-active', '');
+
+
+  console.log(currentSlideIndex);
+
+}
+
+btnPrev.onclick = function() {
+  console.log('Prev Slide');
+
+  //Скрываем текущий слайд
+  const currentSlide = slider.querySelector(`[data-active]`);
+  const currentSlideIndex = +currentSlide.dataset.index;
+  currentSlide.classList.add('hidden');
+  currentSlide.removeAttribute('data-active');
+
+  //Показывать следующий слайд
+  const nextSlideIndex = currentSlideIndex  === 0 ? sliderItems.length - 1 : currentSlideIndex - 1;
+  const nextSlide = slider.querySelector(`[data-index='${nextSlideIndex}']`);
+  nextSlide.classList.remove('hidden');
+  nextSlide.setAttribute('data-active', '');
+
+
+  console.log(currentSlideIndex);
+
+}
