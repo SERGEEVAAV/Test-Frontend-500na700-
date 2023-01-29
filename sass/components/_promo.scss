@@ -51,6 +51,7 @@
 //   // margin-bottom: 150px;
 // }
 .promo-img {
+  position: relative;
   @include media-mobile {
     width: 384px;
     height: 450px;

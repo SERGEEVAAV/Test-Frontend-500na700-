@@ -1,5 +1,6 @@
 .navigation {
   display: flex;
+  
   @include media-tablet {
     display: block;
     margin: 0;
@@ -43,7 +44,8 @@
       position: fixed;
       top: 0;
       right: 0;
-      width: 250px; 
+      width: 450px; 
+      height: 100%;
       background: #000;
       margin-top: 78px;
       padding: 36px 0;
@@ -57,7 +59,7 @@
   }  
   @include media-mobile {
       display: block;
-      width:250px;
+      width:350px;
       margin-top: 58px;
       text-align: center;
       
@@ -77,27 +79,56 @@
 }
 .navigation .navigation__submenu {
   display: none;
-  column-gap: 200px;
   column-count: 2;
   position: absolute;
   top: 75px;
-  width: 1440px;
   z-index: 10;
   margin: 0;
   padding: 0;
   list-style: none;
   background: $color-background;
- 
+  @include media-mobile {
+    position:static;
+    top: 150px;
+    left: 50px;
+  }
 
 }
-
+.navigation__submenu {
+  @include media-mobile {
+   padding-left: 50px;
+  }
+}
 .submenu-link {
-  display: flex;
-  margin-bottom: 30px;
+  @include media-mobile {
+    @include font($size: 14px, $height: 21px);
+    display: flex;
+    margin: 0 0 30px 34px;
+  
 }
-.navigation > li:hover .navigation__submenu {
+}
+.submenu-link:first-child {
+  @include media-mobile {
+    margin-top: 30px;
+  }
+  
+}
+.navigation > li:hover .navigation__submenu{
   display: block;
+  width: 1440px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+ @include media-mobile {
+  column-count: 1;
+  width: 250px;
+  left: 50px;
+ }
+  
   
 }    
-  
 
+.navigation > li:hover.navigation__link {
+  @include media-mobile {
+    top: 50px;
+  }
+
+}

@@ -328,6 +328,13 @@ html {
   overflow-x: hidden;
 }
 
+@media (max-width: 414px) {
+  .menu-opened.active {
+    position: fixed;
+    overflow-y: hidden;
+  }
+}
+
 .ico {
   cursor: pointer;
   display: inline-block;
@@ -409,6 +416,20 @@ html {
 
 .burger.active span::after {
   transform: rotateZ(-45deg) translateY(0);
+}
+
+.nav_shadow {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.nav_shadow.active {
+  display: block;
 }
 
 .wrapper {
@@ -595,6 +616,9 @@ a {
   }
 }
 
+.promo-img {
+  position: relative;
+}
 @media (max-width: 414px) {
   .promo-img {
     width: 384px;
@@ -729,7 +753,8 @@ a {
     position: fixed;
     top: 0;
     right: 0;
-    width: 250px;
+    width: 450px;
+    height: 100%;
     background: #000;
     margin-top: 78px;
     padding: 36px 0;
@@ -744,7 +769,7 @@ a {
 @media (max-width: 414px) {
   .header__navigation {
     display: block;
-    width: 250px;
+    width: 350px;
     margin-top: 58px;
     text-align: center;
   }
@@ -762,25 +787,63 @@ a {
 
 .navigation .navigation__submenu {
   display: none;
-  column-gap: 200px;
   column-count: 2;
   position: absolute;
   top: 75px;
-  width: 1440px;
   z-index: 10;
   margin: 0;
   padding: 0;
   list-style: none;
   background: #000;
 }
+@media (max-width: 414px) {
+  .navigation .navigation__submenu {
+    position: static;
+    top: 150px;
+    left: 50px;
+  }
+}
 
-.submenu-link {
-  display: flex;
-  margin-bottom: 30px;
+@media (max-width: 414px) {
+  .navigation__submenu {
+    padding-left: 50px;
+  }
+}
+
+@media (max-width: 414px) {
+  .submenu-link {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21px;
+    display: flex;
+    margin: 0 0 30px 34px;
+  }
+}
+
+@media (max-width: 414px) {
+  .submenu-link:first-child {
+    margin-top: 30px;
+  }
 }
 
 .navigation > li:hover .navigation__submenu {
   display: block;
+  width: 1440px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+}
+@media (max-width: 414px) {
+  .navigation > li:hover .navigation__submenu {
+    column-count: 1;
+    width: 250px;
+    left: 50px;
+  }
+}
+
+@media (max-width: 414px) {
+  .navigation > li:hover.navigation__link {
+    top: 50px;
+  }
 }
 
 .news {

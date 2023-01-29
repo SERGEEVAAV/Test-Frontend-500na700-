@@ -55,3 +55,18 @@
 .burger.active span::after {
     transform: rotateZ(-45deg) translateY(0);
 }
+
+//затемнение экрана при открытии бургер меню
+
+.nav_shadow {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.4);
+}
+.nav_shadow.active {
+    display: block;
+}

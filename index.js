@@ -85,13 +85,17 @@ btnPrev.onclick = function() {
 
 const burger = document.querySelector('.burger');
 const header__navigation = document.querySelector('.header__navigation');
+const menu_opened = document.querySelector('.menu-opened');
 
 const link = document.querySelector('.navigation__link');
 const navigation__submenu = document.querySelector('.navigation__submenu');
+const nav_shadow = document.querySelector('.nav_shadow');
 
 burger.addEventListener('click', () => {
   burger.classList.toggle('active');
   header__navigation.classList.toggle('_active');
+  nav_shadow.classList.toggle('active');
+  menu_opened.classList.toggle('active');
 });
 
 link.addEventListener('click', () => {
