@@ -5,7 +5,13 @@ body {
 html {
   overflow-x: hidden;
 }
-
+.menu-opened.active {
+  @include media-mobile {
+    position: fixed;
+    overflow-y: hidden;
+  }
+ 
+}
 
 // h2 {
 //   @extend %font-prim;
